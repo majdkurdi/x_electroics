@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "835886752657",
+    "project_id": "x-electronics-7decb",
+    "storage_bucket": "x-electronics-7decb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835886752657:android:547fee07b1be8c6dbd3030",
+        "android_client_info": {
+          "package_name": "com.example.x_electronics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835886752657-914i26t9a9g3ebh1mb6ps9e38ao2396h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv7q5Fwuo5Uc-fyhEPaph4aNTfsdS6J4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835886752657-914i26t9a9g3ebh1mb6ps9e38ao2396h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
