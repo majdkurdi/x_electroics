@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import './controllers/products_controller.dart';
 import './views/welcome_screen.dart';
 import './views/home_screen.dart';
+import './views/item_details.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       routes: {
         WelcomeScreen.routeName: (ctx) => WelcomeScreen(),
         HomeScreen.routeName: (ctx) => HomeScreen(),
+        // ItemDetailsScreen.routeName: (ctx) => ItemDetailsScreen()
       },
       initialRoute: WelcomeScreen.routeName,
     );

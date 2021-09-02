@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../modals/product.dart';
+import '../views/item_details.dart';
 
 class ItemCard extends StatelessWidget {
   final Product item;
@@ -24,7 +26,9 @@ class ItemCard extends StatelessWidget {
           children: [Text(item.name), Text('${item.price}\$')],
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => ItemDetailsScreen(item));
+          },
           child: Text(
             'Read More',
             style: TextStyle(color: Colors.grey),

@@ -13,8 +13,15 @@ class FireStoreDatabase {
     for (var pro in fetchedData) {
       final proData = pro.data() as Map<String, dynamic>;
 
-      products.add(Product(proData['name'], proData['price'].toDouble(),
-          proData['description'], proData['imageUrl'], proData['discount']));
+      products.add(Product(
+          pro.id,
+          proData['name'],
+          proData['price'].toDouble(),
+          proData['description'],
+          proData['imageUrl'],
+          proData['discount'],
+          proData['productType'],
+          proData['top']));
     }
     print(products.length);
     print(products[0].discount);
