@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../views/typeProducts.dart';
 import '../views/home_screen.dart';
@@ -10,7 +11,7 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 3,
+            height: Get.height / 3,
             child: Image(
               image: AssetImage('assets/logo.png'),
             ),

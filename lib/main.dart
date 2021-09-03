@@ -3,14 +3,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 
 import './controllers/products_controller.dart';
+import './controllers/cart_controller.dart';
 import './views/welcome_screen.dart';
 import './views/home_screen.dart';
-import './views/item_details.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   Get.put(ProductsController());
+  Get.put(CartController());
 
   runApp(MyApp());
 }

@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controllers/cart_controller.dart';
 import '../modals/product.dart';
+import '../modals/cart_item.dart';
 import '../widgets/details_list_tile.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
   static const routeName = '/item_details_Screen';
   final Product item;
   ItemDetailsScreen(this.item);
+  final cartController = Get.find<CartController>();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +22,7 @@ class ItemDetailsScreen extends StatelessWidget {
           FadeInImage(
             placeholder: AssetImage('assets/logo.png'),
             image: NetworkImage(item.imageUrl),
-            height: MediaQuery.of(context).size.height / 3,
+            height: Get.height / 3,
             width: double.infinity,
           ),
           Padding(
@@ -49,7 +53,11 @@ class ItemDetailsScreen extends StatelessWidget {
             child: ElevatedButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.black)),
-              onPressed: () {},
+              onPressed: () {
+                cartController.addToCart(item);
+                Get.snackbar('Done:', 'Item added to the Cart!',
+                    snackPosition: SnackPosition.BOTTOM);
+              },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
