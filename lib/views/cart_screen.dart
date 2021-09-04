@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/cart_controller.dart';
 import '../modals/cart_item.dart';
+import '../views/add_order_screen.dart';
 import '../widgets/cart_item_card.dart';
 
 class CartScreen extends StatefulWidget {
@@ -11,6 +12,12 @@ class CartScreen extends StatefulWidget {
 
 class _CartScreenState extends State<CartScreen> {
   final cartController = Get.find<CartController>();
+
+  @override
+  void dispose() {
+    cartController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +45,13 @@ class _CartScreenState extends State<CartScreen> {
               'Your Items:',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
+            if (items.isEmpty)
+              Container(
+                height: 100,
+                child: Center(
+                  child: Text('Start adding items to the Cart!'),
+                ),
+              ),
             ListView.builder(
               itemBuilder: (ctx, i) => CartItemCard(i + 1, items[i], () {
                 setState(() {});
@@ -52,7 +66,13 @@ class _CartScreenState extends State<CartScreen> {
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         items.isEmpty ? Colors.grey : Colors.black)),
-                onPressed: () {},
+                onPressed: () {
+                  if (items.isNotEmpty)
+                    Get.to(() => AddOrderScreen());
+                  else
+                    Get.snackbar('Warning', 'There is No items to Order!',
+                        snackPosition: SnackPosition.BOTTOM);
+                },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(

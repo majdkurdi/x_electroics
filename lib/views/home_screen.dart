@@ -59,8 +59,8 @@ class HomeScreen extends StatelessWidget {
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: 200,
                       childAspectRatio: 2 / 3,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20),
+                      crossAxisSpacing: 2,
+                      mainAxisSpacing: 2),
                   itemBuilder: (context, i) => ItemCard(products[i]),
                   itemCount: products.length,
                   shrinkWrap: true,

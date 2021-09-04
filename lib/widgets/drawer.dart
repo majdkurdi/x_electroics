@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../views/typeProducts.dart';
 import '../views/home_screen.dart';
+import '../views/orders_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -19,7 +20,8 @@ class AppDrawer extends StatelessWidget {
           DrawerListTile(Icons.home, 'Home', HomeScreen()),
           DrawerListTile(Icons.mobile_friendly, 'Smart Phone'),
           DrawerListTile(Icons.tv, 'Smart TV'),
-          DrawerListTile(Icons.ac_unit, 'Air Conditioner')
+          DrawerListTile(Icons.ac_unit, 'Air Conditioner'),
+          DrawerListTile(Icons.shopping_bag, 'Orders', OrdersScreen(), false)
         ],
       ),
     );
@@ -30,15 +32,20 @@ class DrawerListTile extends StatelessWidget {
   final IconData icon;
   final String title;
   final Widget? route;
-  DrawerListTile(this.icon, this.title, [this.route]);
+  final bool replacementPush;
+  DrawerListTile(this.icon, this.title,
+      [this.route, this.replacementPush = true]);
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         GestureDetector(
             onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (ctx) => route ?? TypeProductsScreen(title)));
+              if (replacementPush)
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (ctx) => route ?? TypeProductsScreen(title)));
+              else
+                Get.to(() => route);
             },
             child: ListTile(leading: Icon(icon), title: Text(title))),
         Divider(

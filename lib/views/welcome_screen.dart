@@ -23,6 +23,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 
   @override
+  void dispose() {
+    productsController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(

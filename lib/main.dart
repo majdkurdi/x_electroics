@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import './controllers/products_controller.dart';
 import './controllers/cart_controller.dart';
+import './controllers/orders_controller.dart';
 import './views/welcome_screen.dart';
 import './views/home_screen.dart';
 
@@ -12,6 +13,7 @@ void main() async {
   await Firebase.initializeApp();
   Get.put(ProductsController());
   Get.put(CartController());
+  Get.put(OrdersController());
 
   runApp(MyApp());
 }
