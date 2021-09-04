@@ -5,6 +5,7 @@ import '../controllers/orders_controller.dart';
 import '../modals/location.dart';
 import '../modals/cart_item.dart';
 import '../services/locationService.dart';
+import '../views/home_screen.dart';
 import '../widgets/my_text_field.dart';
 
 enum LocationStatus { NO_LOCATION, GIVEN_LOCATION, WAITING_FOR_LOCATION }
@@ -126,9 +127,9 @@ class _AddOrderScreenState extends State<AddOrderScreen> {
                       if (response == 'done') {
                         setState(() {
                           loading = false;
+                          cartController.items.value = <CartItem>[];
                         });
-                        cartController.items.value = <CartItem>[];
-                        Get.back();
+                        Get.offAllNamed(HomeScreen.routeName);
                         Get.snackbar('Done', 'Order added Successfully!',
                             snackPosition: SnackPosition.BOTTOM);
                       } else {

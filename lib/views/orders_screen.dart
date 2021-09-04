@@ -45,6 +45,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
             : SingleChildScrollView(
                 child: Column(
                   children: [
+                    if (orders.isEmpty)
+                      Center(
+                        child: Text('There is no Orders to show.'),
+                      ),
                     ListView.builder(
                       itemBuilder: (ctx, i) => OrderCard(orders[i]),
                       itemCount: orders.length,

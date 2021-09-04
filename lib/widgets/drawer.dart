@@ -45,7 +45,8 @@ class DrawerListTile extends StatelessWidget {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (ctx) => route ?? TypeProductsScreen(title)));
               else
-                Get.to(() => route);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => route!));
             },
             child: ListTile(leading: Icon(icon), title: Text(title))),
         Divider(
