@@ -1,16 +1,42 @@
-# x_electronics
+# X Electronics
 
-A new Flutter project.
+Flutter Online Shop Application for an electronics store where you can browse the products and order the things you like.
+ 
 
-## Getting Started
+<table>
+<tr>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/1.jpg"/>
+</td>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/2.jpg"/>
+</td>
+</tr>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+<tr>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/3.jpg"/>
+</td>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/4.jpg"/>
+</td>
+</tr>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<tr>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/5.jpg"/>
+</td>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/6.jpg"/>
+</td>
+</tr>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+<tr>
+<td>
+<img width="200" height ="400" src="https://raw.githubusercontent.com/majdkurdi/x_electroics/main/Screenshots/7.jpg"/>
+</td>
+
+</tr>
+</table>
