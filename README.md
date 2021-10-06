@@ -1,6 +1,6 @@
 # X Electronics
 
-Flutter Online Shop Application for an electronics store where you can browse the products and order the things you like.
+Flutter Online Store Application for an electronics Company where you can browse the products and order the things you like.
  
 
 <table>
